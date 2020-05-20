@@ -22,27 +22,27 @@ function loadSong(song) {
 }
 
 function playSong() {
-    musicContainer.classList.add('play');
-    playBtn.querySelector('i.fas').classList.remove('fa-play')
-    playBtn.querySelector('i.fas').classList.add('fa-pause')
+	musicContainer.classList.add('play');
+	playBtn.querySelector('i.fas').classList.remove('fa-play');
+	playBtn.querySelector('i.fas').classList.add('fa-pause');
 
-    audio.play();
+	audio.play();
 }
 
 function pauseSong() {
-    musicContainer.classList.remove('play');
-    playBtn.querySelector('i.fas').classList.remove('fa-pause')
-    playBtn.querySelector('i.fas').classList.add('fa-play')
+	musicContainer.classList.remove('play');
+	playBtn.querySelector('i.fas').classList.remove('fa-pause');
+	playBtn.querySelector('i.fas').classList.add('fa-play');
 
-    audio.pause();
+	audio.pause();
 }
 
 playBtn.addEventListener('click', () => {
-    const isPlaying = musicContainer.classList.contains('play');
-    
-    if(isPlaying) {
-        pauseSong();
-    } else {
-        playSong();
-    }
+	const isPlaying = musicContainer.classList.contains('play');
+
+	if (isPlaying) {
+		pauseSong();
+	} else {
+		playSong();
+	}
 });
